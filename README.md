@@ -16,11 +16,11 @@ It builds the following:
 * 3 x Ubuntu VMs (Proxy, Web, Database) that are private and get Outbound internet access through PAN FWs.
 * Palo Alto Firewalls also are bootstrapped as part of the Terraform Code
 
-## Component	Version:
+## Component	Version
 * Aviatrix Controller	UserConnect-6.8.1148  
 * Versions of the Aviatrix, and AWS providers can all be found in versions.tf. 
 
-## Dependencies:
+## Dependencies
 * Software version requirements met     
 * Aviatrix Controller & Copilot (Highly Recommended) need to be up and running   
 * Onboarding the AWS Account is automated       
@@ -41,10 +41,10 @@ And the contents of the config folder should look like the below screenshot. Ple
 ### Overall Design
 ![Ingress + uSeg + FireNet - Overall Design (1)](https://user-images.githubusercontent.com/16576150/185456023-b6898732-c20c-4f6c-9d72-a4949cadd867.png)
 
-### Inbound Traffic Flow:
+### Inbound Traffic Flow
 ![Ingress + uSeg + FireNet - Inbound Traffic Flow (1)](https://user-images.githubusercontent.com/16576150/185456127-3937f726-4f46-4e3c-8dce-b4bfc464824e.png)
 
-### Outbound Traffic Flow:
+### Outbound Traffic Flow
 ![Ingress + uSeg + FireNet - Outbound Security (2)](https://user-images.githubusercontent.com/16576150/185456214-0f724b5b-cc83-4a4c-b8e9-f94d9d4da762.png)
 
 ## Usage
