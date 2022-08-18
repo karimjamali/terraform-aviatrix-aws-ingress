@@ -1,4 +1,4 @@
-# Aviatrix AWS Ingress
+# Aviatrix AWS Ingress with Wordpress
 
 ## Summary
 
