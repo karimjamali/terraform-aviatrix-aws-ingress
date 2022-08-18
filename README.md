@@ -65,11 +65,10 @@ And the contents of the config folder should look like the below screenshot. Ple
 ## Additional Important Variables to Understand
 Please note that these are not required to run the code but to make some changes.
 
-Ubuntu VMs (Proxy, Web, and DB) have a username of ubuntu and their password is in the variable ubuntu_vms_password
-
-Variables proxy-lb-1 and proxy-lb-2 are the static addresses configured on the NLB.
-
-Variables pan_fw_username and pan_fw_password hold the values for the username and password for PAN FWs. You can't change the values unless you change the bootstrap package. 
+* Ubuntu VMs (Proxy, Web, and DB) have a username of ubuntu and their password is in the variable ubuntu_vms_password
+* Variables proxy-lb-1 and proxy-lb-2 are the static addresses configured on the NLB.
+* Variables pan_fw_username and pan_fw_password hold the values for the username and password for PAN FWs. You can't change the values unless you change the bootstrap package.
+* The VMs are private, however they get outbound internet connectivity through the PAN FWs, thus bootstrapping is required for the VMs to download the packages to run Wordpress. 
 
 
  
