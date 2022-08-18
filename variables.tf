@@ -36,7 +36,7 @@ variable "pan_fw_s3_bucket_bootstrap" {
   default = ""
 }
 
-variable "s3-role" {
+variable "s3_role" {
   description = "This is the Role given to the FW Instances to read from S3"
   default = ""
 }
