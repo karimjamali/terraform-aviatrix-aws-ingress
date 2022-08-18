@@ -10,6 +10,9 @@ It builds the following:
 * Aviatrix Transit in us-east-2 without FireNet.  
 * 3 Spoke VPCs (Ingress, Proxy, Web) attached to Aviatrix Transit in us-east-1  
 * 1 Spoke VPC (Database) attached to the Aviatrix Transit in us-east-2 
+* Wordpress Application (Proxy, Web and Database)
+* Central Application Load Balancer (ALB) configured in the Ingress VPC
+* Proxy LB (NLB) that services the Proxy tier of the application
 * 3 x Ubuntu VMs (Proxy, Web, Database) that are private and get Outbound internet access through PAN FWs.
 * Palo Alto Firewalls also are bootstrapped as part of the Terraform Code
 
