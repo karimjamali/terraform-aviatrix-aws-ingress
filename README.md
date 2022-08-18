@@ -42,7 +42,7 @@ Contents of the config folder should look like the below screenshot. Please note
 
 ## Architecture
 ### Overall Design
-![Ingress + uSeg + FireNet - Overall Design (1)](https://user-images.githubusercontent.com/16576150/185456023-b6898732-c20c-4f6c-9d72-a4949cadd867.png)
+![Ingress + uSeg + FireNet - Overall Design (2)](https://user-images.githubusercontent.com/16576150/185468311-6271e5c3-42d8-45f5-9c93-5e29ccbcd287.png)
 
 ### Inbound Traffic Flow
 ![Ingress + uSeg + FireNet - Inbound Traffic Flow (1)](https://user-images.githubusercontent.com/16576150/185456127-3937f726-4f46-4e3c-8dce-b4bfc464824e.png)
