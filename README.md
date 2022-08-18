@@ -1,5 +1,8 @@
 # Aviatrix AWS Ingress with Wordpress
 
+![aviatrix_logo_final_reverse (1)](https://user-images.githubusercontent.com/16576150/185464537-8cb09a38-d0d8-41fe-b400-5dd863eacf91.png)
+
+
 ## Summary
 
 This repository builds out an ingress scenario leveraging Aviatrix on AWS using a 3-tier Wordpress Application. 
