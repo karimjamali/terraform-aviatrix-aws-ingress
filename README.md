@@ -66,7 +66,6 @@ module "aws-ingress" {
   aws_secret_key = ""
   home_ip = ""
   pan_fw_s3_bucket_bootstrap = ""
-  s3_role = ""
 }
 ```
 
