@@ -52,8 +52,9 @@ Contents of the config folder should look like the below screenshot. Please note
 
 ## Usage 
 
-This is a published module on Terraform Registry. You only need to copy and paste the below code and fill in the information. For the home_ip please note that it needs to be IP Address/Mask for instance if your Home Adddress is 1.1.1.1, then the home_ip variable will be 1.1.1.1/32. 
+This is a published module on Terraform Registry. You only need to  the below code and fill in the information. For the home_ip please note that it needs to be IP Address/Mask for instance if your Home Adddress is 1.1.1.1, then the home_ip variable will be 1.1.1.1/32. 
 
+```terraform 
 module "aws-ingress" {
   source  = "karimjamali/aws-ingress/aviatrix"
   version = "1.0.1"
@@ -66,6 +67,7 @@ module "aws-ingress" {
   home_ip = ""
   pan_fw_s3_bucket_bootstrap = ""
 }
+```
 
 ## Additional Important Variables to Understand
 Please note that these are not required to run the code but to make some changes.
