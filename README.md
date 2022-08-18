@@ -52,7 +52,7 @@ Contents of the config folder should look like the below screenshot. Please note
 
 ## Usage 
 
-This is a published module on Terraform Registry. You only need to  the below code and fill in the information. For the home_ip please note that it needs to be IP Address/Mask for instance if your Home Adddress is 1.1.1.1, then the home_ip variable will be 1.1.1.1/32. The variable s3_role is the IAM role provided to the PAN FW Ec2 instance to read from S3 for bootstrapping purposes. 
+This is a published module on Terraform Registry. You only need to  the below code and fill in the information. For the home_ip please note that it needs to be IP Address/Mask for instance if your Home Adddress is 1.1.1.1, then the home_ip variable will be 1.1.1.1/32. The variable s3_role is the IAM role provided to the PAN FW EC2 instance to read from S3 for bootstrapping purposes. 
 
 ```terraform 
 module "aws-ingress" {
