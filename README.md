@@ -50,17 +50,24 @@ Contents of the config folder should look like the below screenshot. Please note
 ### Outbound Traffic Flow
 ![Ingress + uSeg + FireNet - Outbound Security (2)](https://user-images.githubusercontent.com/16576150/185456214-0f724b5b-cc83-4a4c-b8e9-f94d9d4da762.png)
 
-## Usage
-1. Clone the repository: https://github.com/karimjamali/aviatrix-aws-ingress
-2. Update the below variable details in the variables.tf file.     
-* variable "avx_controller_ip"   
-* variable "avx_controller_username"   
-* variable "avx_controller_password"    
-* variable "aws_account_number"    
-* variable "aws_acess_key"    
-* variable "aws_secret_key"   
-* variable "home_ip"  
-* variable "pan_fw_s3_bucket_bootstrap"
+## Usage 
+
+This is a published module on Terraform Registry. You only need to  the below code and fill in the information. For the home_ip please note that it needs to be IP Address/Mask for instance if your Home Adddress is 1.1.1.1, then the home_ip variable will be 1.1.1.1/32. 
+
+```terraform 
+module "aws-ingress" {
+  source  = "karimjamali/aws-ingress/aviatrix"
+  version = "1.0.1"
+  avx_controller_ip = ""
+  avx_controller_username = ""
+  avx_controller_password = ""
+  aws_account_number = ""
+  aws_acess_key = ""
+  aws_secret_key = ""
+  home_ip = ""
+  pan_fw_s3_bucket_bootstrap = ""
+}
+```
 
 ## Additional Important Variables to Understand
 Please note that these are not required to run the code but to make some changes.

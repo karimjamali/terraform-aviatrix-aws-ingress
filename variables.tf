@@ -27,6 +27,12 @@ variable "aws_secret_key" {
 }
 
 variable "home_ip" {
+  description = "This is the IP Address from which you are accessing the setup use IP/Mask for example 1.1.1.1/32"
+  default = ""
+}
+
+variable "pan_fw_s3_bucket_bootstrap" {
+  description = "This is the bucket that includes the bootsrap information for the PAN FW"
   default = ""
 }
 
@@ -80,9 +86,7 @@ variable "pan_fw_password" {
     default = "Aviatrix123#"
 }
 
-variable "pan_fw_s3_bucket_bootstrap" {
-    default = "s3-kj-panw-bucket-bootstrap"
-}
+
 
 
 
