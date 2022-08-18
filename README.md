@@ -14,11 +14,13 @@ It builds the following:
 * Palo Alto Firewalls also are bootstrapped as part of the Terraform Code
 
 Overall Design Can be found here:
+![Ingress + uSeg + FireNet - Overall Design (1)](https://user-images.githubusercontent.com/16576150/185456023-b6898732-c20c-4f6c-9d72-a4949cadd867.png)
 
+Inbound Traffic Flow:
 
 
 ## Component	Version:
-* Aviatrix Controller	UserConnect-6.7.1186.     
+* Aviatrix Controller	UserConnect-6.8    
 * Versions of the Aviatrix, AWS and other providers can all be found in versions.tf. 
 
 ## Dependencies:
@@ -28,8 +30,7 @@ Overall Design Can be found here:
 * Sufficient limits in place for CSPs and regions in scope (EIPs, Compute quotas, etc.)   
 * Active subscriptions for the NGFW firewall images in scope   
 
-## Diagram
-The diagram with all layers and steps can be found here:https://lucid.app/lucidchart/8fb7c2d7-f481-42cc-a1ca-773ee9e3ae5b/edit?invitationId=inv_c9f886c7-c48b-4c23-a55f-1bfbcc7ddc60#
+
 
 
 The proper sequence for following the lab setup is as follows:    
