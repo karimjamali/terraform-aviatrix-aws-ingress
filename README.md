@@ -17,6 +17,9 @@ Overall Design Can be found here:
 ![Ingress + uSeg + FireNet - Overall Design (1)](https://user-images.githubusercontent.com/16576150/185456023-b6898732-c20c-4f6c-9d72-a4949cadd867.png)
 
 Inbound Traffic Flow:
+![Ingress + uSeg + FireNet - Inbound Traffic Flow (1)](https://user-images.githubusercontent.com/16576150/185456127-3937f726-4f46-4e3c-8dce-b4bfc464824e.png)
+
+Outbound Traffic Flow:
 
 
 ## Component	Version:
