@@ -30,6 +30,10 @@ variable "home_ip" {
   default = ""
 }
 
+variable "s3-role" {
+  description = "This is the Role given to the FW Instances to read from S3"
+  default = ""
+}
 variable "aws_region_1" {
   default = "us-east-1"
 }  
