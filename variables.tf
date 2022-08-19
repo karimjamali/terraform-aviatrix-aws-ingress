@@ -31,15 +31,17 @@ variable "home_ip" {
   default = ""
 }
 
+variable "role_fw_s3" {
+  description = "The role that allows the FW Instances to read S3 for bootstrapping"
+  default = ""
+}
+
 variable "pan_fw_s3_bucket_bootstrap" {
   description = "This is the bucket that includes the bootsrap information for the PAN FW"
   default = ""
 }
 
-variable "s3_role" {
-  description = "This is the Role given to the FW Instances to read from S3"
-  default = ""
-}
+
 variable "aws_region_1" {
   default = "us-east-1"
 }  
