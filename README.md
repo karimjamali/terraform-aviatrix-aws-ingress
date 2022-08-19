@@ -58,7 +58,7 @@ This is a published module on Terraform Registry. You only need to  the below co
 ```terraform 
 module "aws-ingress" {
   source  = "karimjamali/aws-ingress/aviatrix"
-  version = "1.0.7"
+  version = "1.0.9"
   avx_controller_ip = ""
   avx_controller_username = ""
   avx_controller_password = ""
