@@ -31,6 +31,7 @@ It builds the following:
 * Active subscriptions for the NGFW firewall images in scope   
 
 ## PAN FWs Bootstrapping
+Firewall Bootstrapping is a key pillar in the architecture as it is required for the 3 x VMs (Proxy, Web and DB) to download the required packages in a secure fashion. Thus, Firewall Bootstrapping needs to take place before the creation of the 3 instances. 
 For FW Bootstrapping you need to follow the steps found here: https://docs.aviatrix.com/HowTos/bootstrap_example.html
 In a nutshell, you need to create the IAM Role, attach it to the PAN FW Instance(s) and put the relevant files in the S3 directory. 
 
