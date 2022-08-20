@@ -58,7 +58,7 @@ data "aviatrix_firenet_vendor_integration" "fw1" {
   username = var.pan_fw_username
   password = var.pan_fw_password
   save = true
-  number_of_retries = 3
+  number_of_retries = 5
   depends_on = [
     module.firenet_1
   ]
