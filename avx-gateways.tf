@@ -71,7 +71,7 @@ data "aviatrix_firenet_vendor_integration" "fw2" {
   instance_id   = module.firenet_1[0].aviatrix_firewall_instance[1].instance_id
   vendor_type   = "Palo Alto Networks VM-Series"
   public_ip     = module.firenet_1[0].aviatrix_firewall_instance[1].public_ip
-  number_of_retries = 3
+  number_of_retries = 5
   username = var.pan_fw_username
   password = var.pan_fw_password
   save= true
