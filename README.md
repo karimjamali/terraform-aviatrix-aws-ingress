@@ -55,7 +55,7 @@ Contents of the config folder should look like the below screenshot. Please note
 PAN FW bootstrapping is a requirement. Please refer to the PAN FWs Bootstrapping section and download the two files bootstrap.xml and init.cfg from https://github.com/karimjamali/terraform-aviatrix-aws-ingress
 
 
-home_ip: has to be IP Address/Mask for instance 1.1.1.1/32
+home_ip: has to be IP Address/Mask for instance in the form 1.1.1.1/32
 role_fw_s3: is the role attached to the FW instance to access S3 for bootstrapping
 pan_fw_s3_bucket_bootstrap: is the bucket that hosts the bootstrap content
 
