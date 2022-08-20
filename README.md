@@ -56,7 +56,9 @@ PAN FW bootstrapping is a requirement. Please refer to the PAN FWs Bootstrapping
 
 
 home_ip: has to be IP Address/Mask for instance in the form 1.1.1.1/32
+
 role_fw_s3: is the role attached to the FW instance to access S3 for bootstrapping
+
 pan_fw_s3_bucket_bootstrap: is the bucket that hosts the bootstrap content
 
 ```terraform 
