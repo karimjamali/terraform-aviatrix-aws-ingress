@@ -52,13 +52,17 @@ Contents of the config folder should look like the below screenshot. Please note
 ![Ingress + uSeg + FireNet - Outbound Security (2)](https://user-images.githubusercontent.com/16576150/185456214-0f724b5b-cc83-4a4c-b8e9-f94d9d4da762.png)
 
 ## Usage 
+PAN FW bootstrapping is a requirement. Please refer to the PAN FWs Bootstrapping section and download the two files bootstrap.xml and init.cfg from https://github.com/karimjamali/terraform-aviatrix-aws-ingress
 
-This is a published module on Terraform Registry. You only need to  the below code and fill in the information. For the home_ip please note that it needs to be IP Address/Mask for instance if your Home Adddress is 1.1.1.1, then the home_ip variable will be 1.1.1.1/32. The variable s3_role is the IAM role provided to the PAN FW EC2 instance to read from S3 for bootstrapping purposes. The variable role_fw_s3 is the role required for the FW to access the bootstrap files in S3. 
+
+home_ip: has to be IP Address/Mask for instance 1.1.1.1/32
+role_fw_s3: is the role attached to the FW instance to access S3 for bootstrapping
+pan_fw_s3_bucket_bootstrap: is the bucket that hosts the bootstrap content
 
 ```terraform 
 module "aws-ingress" {
   source  = "karimjamali/aws-ingress/aviatrix"
-  version = "1.0.9"
+  version = "1.1.11"
   avx_controller_ip = ""
   avx_controller_username = ""
   avx_controller_password = ""
