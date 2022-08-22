@@ -64,7 +64,7 @@ pan_fw_s3_bucket_bootstrap: is the bucket that hosts the bootstrap content
 ```terraform 
 module "aws-ingress" {
   source  = "karimjamali/aws-ingress/aviatrix"
-  version = "1.12.0"
+  version = "1.14.0"
   avx_controller_ip = ""
   avx_controller_username = ""
   avx_controller_password = ""
