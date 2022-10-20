@@ -89,7 +89,15 @@ module "security_group_database_vm" {
       protocol    = "All"
       description = "ethr tool"
       cidr_blocks = "10.0.0.0/8"
-  }]
+    },
+    {
+      from_port   = 0
+      to_port     = 65535
+      protocol    = "All"
+      description = "enclave"
+      cidr_blocks = "100.64.0.0/10"
+    }
+  ]
   egress_rules = ["all-all"]
   providers = {
     aws = aws.region-2
