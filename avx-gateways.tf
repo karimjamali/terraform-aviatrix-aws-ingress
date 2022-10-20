@@ -17,7 +17,7 @@ module "mc_transit_aws-us-east-1-transit-1" {
   cloud                  = "AWS"
   cidr                   = "10.100.0.0/16"
   region                 = "us-east-1"
-  account                = aviatrix_account.aws-account.account_name
+  account                = var.aws_account_name
   enable_transit_firenet = true
   insane_mode            = true
   enable_segmentation    = true
@@ -86,7 +86,7 @@ module "spoke_aws-us-east-1-proxy" {
   name       = "aws-us-east-1-proxy"
   cidr       = "10.1.0.0/16"
   region     = "us-east-1"
-  account    = aviatrix_account.aws-account.account_name
+  account    = var.aws_account_name
   transit_gw = module.mc_transit_aws-us-east-1-transit-1.transit_gateway.gw_name
   ha_gw      = var.ha_setup
 
@@ -101,7 +101,7 @@ module "spoke_aws-us-east-1-web" {
   name       = "aws-us-east-1-web"
   cidr       = "10.2.0.0/16"
   region     = "us-east-1"
-  account    = aviatrix_account.aws-account.account_name
+  account    = var.aws_account_name
   transit_gw = module.mc_transit_aws-us-east-1-transit-1.transit_gateway.gw_name
   ha_gw      = var.ha_setup
 }
@@ -113,7 +113,7 @@ module "spoke_aws-us-east-1-centralized-ingress" {
   name       = "aws-us-east-1-centralized-ingress"
   cidr       = "10.109.0.0/16"
   region     = "us-east-1"
-  account    = aviatrix_account.aws-account.account_name
+  account    = var.aws_account_name
   transit_gw = module.mc_transit_aws-us-east-1-transit-1.transit_gateway.gw_name
   ha_gw      = var.ha_setup
 }
@@ -130,7 +130,7 @@ data "aws_route_table" "public_rt2" {
 ## PSF GW creation in the centralized ingress VPC
 resource "aviatrix_gateway" "centralized-ingress-psf-gateway" {
   cloud_type                                  = 1
-  account_name                                = aviatrix_account.aws-account.account_name
+  account_name                                = var.aws_account_name
   gw_name                                     = "aws-us-east-1-central-ingress-psf-gw"
   vpc_id                                      = module.spoke_aws-us-east-1-centralized-ingress.vpc.vpc_id
   vpc_reg                                     = "us-east-1"
@@ -149,7 +149,7 @@ module "mc_transit_aws-us-east-2-transit-1" {
   cloud                  = "AWS"
   cidr                   = "10.120.0.0/16"
   region                 = "us-east-2"
-  account                = aviatrix_account.aws-account.account_name
+  account                = var.aws_account_name
   enable_transit_firenet = true
   insane_mode            = true
   enable_segmentation    = true
@@ -173,7 +173,7 @@ module "spoke_aws-us-east-2-database" {
   name       = "aws-us-east-2-database"
   cidr       = "10.3.0.0/16"
   region     = "us-east-2"
-  account    = aviatrix_account.aws-account.account_name
+  account    = var.aws_account_name
   transit_gw = module.mc_transit_aws-us-east-2-transit-1.transit_gateway.gw_name
   ha_gw      = var.ha_setup
 }
