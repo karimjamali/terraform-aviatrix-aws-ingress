@@ -93,6 +93,6 @@ provider "aws" {
 Please note that these are not required to run the code but to make some changes.
 
 * Ubuntu VMs (Proxy, Web, and DB) have a username of ubuntu and their password is in the variable ubuntu_vms_password
-* Variables proxy_lb-1 and proxy_lb-2 are the static addresses configured on the NLB.
+* Variables proxy_lb_1 and proxy_lb_2 are the static addresses configured on the NLB.
 * Variables pan_fw_username and pan_fw_password hold the values for the username and password for PAN FWs. You can't change the values unless you change the bootstrap package. The pan_fw_username is admin and pan_fw_password is Aviatrix123#
 * The VMs are private, however they get outbound internet connectivity through the PAN FWs, thus bootstrapping is required for the VMs to download the packages to run Wordpress.
