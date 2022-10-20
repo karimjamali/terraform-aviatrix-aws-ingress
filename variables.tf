@@ -1,7 +1,3 @@
-variable "aws_account_number" {
-  default = null
-}
-
 variable "unique_s3_bucket_name" {
   description = "This is the bucket that includes the bootsrap information for the PAN FW"
 }

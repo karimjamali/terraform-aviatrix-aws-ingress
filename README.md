@@ -59,12 +59,14 @@ Contents of the config folder should look like the below screenshot. Please note
 
 ## Usage
 
+aws_account_name: This is the name of the aws account onboarded to the Aviatrix controller.
 unique_s3_bucket_name: This is a unique name that will be used to create an s3 bucket for the PALO fw boostrap files.
 
 ```terraform
 module "aws-ingress" {
   source                = "karimjamali/aws-ingress/aviatrix"
   version               = "1.15.0"
+  aws_account_name = ""
   unique_s3_bucket_name = ""
 
   providers = {

@@ -1,14 +1,3 @@
-#Adding aws account to the controller
-resource "aviatrix_account" "aws_account" {
-  count              = var.aws_account_number == null ? 0 : 1
-  account_name       = var.aws_account_name
-  cloud_type         = 1
-  aws_account_number = var.aws_account_number
-  aws_iam            = true
-  aws_role_app       = "arn:aws:iam::${var.aws_account_number}:role/aviatrix-role-app"
-  aws_role_ec2       = "arn:aws:iam::${var.aws_account_number}:role/aviatrix-role-ec2"
-}
-
 #creation of us-east-1-transit-1
 module "mc_transit_aws_us_east_1_transit_1" {
   source = "terraform-aviatrix-modules/mc-transit/aviatrix"
@@ -88,7 +77,7 @@ module "spoke_aws_us_east_1_proxy" {
   account      = var.aws_account_name
   transit_gw   = module.mc_transit_aws_us_east_1_transit_1.transit_gateway.gw_name
   ha_gw        = var.ha_setup
-  subnet_pairs = 2
+  subnet_pairs = 3
 }
 
 # Creating the Spoke that hosts the Web VM
