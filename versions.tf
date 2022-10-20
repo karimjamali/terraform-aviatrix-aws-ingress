@@ -7,6 +7,9 @@ terraform {
     aws = {
       source  = "hashicorp/aws"
       version = "~> 4.0"
+      configuration_aliases = [
+        aws.region-2
+      ]
     }
     local = {
       source  = "hashicorp/local"
