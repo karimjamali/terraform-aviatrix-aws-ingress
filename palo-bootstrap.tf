@@ -17,15 +17,15 @@ resource "aws_s3_bucket" "palo" {
 resource "aws_s3_bucket_object" "bootstrap" {
   bucket = aws_s3_bucket.palo.id
   key    = "config/bootstrap.xml"
-  source = "./bootstrap.xml"
-  etag   = filemd5("./bootstrap.xml")
+  source = "${path.module}/bootstrap.xml"
+  etag   = filemd5("${path.module}/bootstrap.xml")
 }
 
 resource "aws_s3_bucket_object" "init_cfg" {
   bucket = aws_s3_bucket.palo.id
   key    = "config/init-cfg.txt"
-  source = "./init-cfg.txt"
-  etag   = filemd5("./init-cfg.txt")
+  source = "${path.module}/init-cfg.txt"
+  etag   = filemd5("${path.module}/init-cfg.txt")
 }
 
 resource "aws_s3_bucket_object" "content" {
