@@ -1,6 +1,6 @@
 # Copy files to the remotestate bucket
 resource "aws_s3_bucket" "palo" {
-  bucket = var.pan_fw_s3_bucket_bootstrap
+  bucket = var.unique_s3_bucket_name
   acl    = "private"
 
   server_side_encryption_configuration {

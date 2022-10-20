@@ -13,11 +13,11 @@ variable "firenet" {
   default = true
 }
 
-variable "proxy_lb-ip1" {
+variable "proxy_lb_ip1" {
   default = "10.1.0.66"
 }
 
-variable "proxy_lb-ip2" {
+variable "proxy_lb_ip2" {
   default = "10.1.0.82"
 }
 

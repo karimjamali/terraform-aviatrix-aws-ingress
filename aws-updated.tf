@@ -109,24 +109,24 @@ module "security_group_centralized_lb" {
 
 # Proxy LB Creation
 resource "aws_lb" "proxy_lb" {
-  name                             = "proxy_lb"
+  name                             = "proxy-lb"
   load_balancer_type               = "network"
   internal                         = true
   enable_cross_zone_load_balancing = true
   subnet_mapping {
     subnet_id            = module.spoke_aws_us_east_1_proxy.vpc.public_subnets[1].subnet_id
-    private_ipv4_address = var.proxy_lb-ip1
+    private_ipv4_address = var.proxy_lb_ip1
   }
 
   subnet_mapping {
     subnet_id            = module.spoke_aws_us_east_1_proxy.vpc.public_subnets[2].subnet_id
-    private_ipv4_address = var.proxy_lb-ip2
+    private_ipv4_address = var.proxy_lb_ip2
   }
 }
 
 # Proxy LB Target Group 
 resource "aws_lb_target_group" "proxy_lb_target_group" {
-  name     = "proxy_lb-tg"
+  name     = "proxy-lb-tg"
   port     = 80
   protocol = "TCP"
   vpc_id   = module.spoke_aws_us_east_1_proxy.vpc.vpc_id

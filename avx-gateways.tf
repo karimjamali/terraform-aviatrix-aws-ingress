@@ -31,7 +31,7 @@ module "firenet_1" {
   keep_alive_via_lan_interface_enabled = true
   transit_module                       = module.mc_transit_aws_us_east_1_transit_1
   firewall_image                       = "Palo Alto Networks VM-Series Next-Generation Firewall Bundle 1"
-  bootstrap_bucket_name_1              = var.pan_fw_s3_bucket_bootstrap
+  bootstrap_bucket_name_1              = var.unique_s3_bucket_name
   iam_role_1                           = aws_iam_role.palo.name
   egress_enabled                       = true
   username                             = var.pan_fw_username
