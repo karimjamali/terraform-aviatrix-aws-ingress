@@ -31,18 +31,6 @@ It builds the following:
 * Sufficient limits in place for CSPs and regions in scope (EIPs, Compute quotas, etc.)
 * Active subscriptions for the NGFW firewall images in scope
 
-## PAN FWs Bootstrapping
-
-Firewall Bootstrapping is a key pillar in the architecture as it is required for the 3 x VMs (Proxy, Web and DB) to download the required packages in a secure fashion. Thus, Firewall Bootstrapping needs to take place before the creation of the 3 instances.
-For FW Bootstrapping you need to follow the steps found here: https://docs.aviatrix.com/HowTos/bootstrap_example.html
-In a nutshell, you need to create the IAM Role, attach it to the PAN FW Instance(s) and put the relevant files in the S3 directory.
-
-S3 directory should look like the below screenshot. The variable name for the S3 bucket is pan_fw_s3_bucket_bootstrap and should be changed to match your bucket name.
-![Screen Shot 2022-08-16 at 9 00 32 PM](https://user-images.githubusercontent.com/16576150/185457948-b163ec9f-b0ab-47aa-99d9-e0ae12680e62.png)
-
-Contents of the config folder should look like the below screenshot. Please note that I have attached both files bootstrap.xml and init.cfg to the github repository for your consumption.
-![Screen Shot 2022-08-16 at 9 00 48 PM](https://user-images.githubusercontent.com/16576150/185458081-8b46eb26-238c-4bb6-b025-bf0484504cf3.png)
-
 ## Architecture
 
 ### Overall Design
@@ -60,7 +48,7 @@ Contents of the config folder should look like the below screenshot. Please note
 ## Usage
 
 aws_account_name: This is the name of the aws account onboarded to the Aviatrix controller.
-unique_s3_bucket_name: This is a unique name that will be used to create an s3 bucket for the PALO fw boostrap files.
+unique_s3_bucket_name: This is a unique name that will be used to create an s3 bucket for the PALO fw bootstrap files. Details on the process (automated for you by this module) can be found here: https://docs.aviatrix.com/HowTos/bootstrap_example.html
 
 ```terraform
 module "aws-ingress" {
