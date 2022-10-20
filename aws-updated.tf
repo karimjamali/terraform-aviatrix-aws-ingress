@@ -207,7 +207,7 @@ resource "aws_instance" "aws_us_east_1_proxy_vm" {
   vpc_security_group_ids = [module.security_group_proxy_vm.this_security_group_id]
   user_data              = templatefile("${path.module}/aws_vm_config/nginx_proxy.tpl", { web_ip = aws_instance.aws_us_east_1_web_vm.private_ip, password = var.ubuntu_vms_password })
   tags = {
-    Name = "aws_us_east_1_proxy_vm"
+    Name = "aws-us-east-1-proxy-vm"
   }
   depends_on = [
     data.aviatrix_firenet_vendor_integration.fw1,
