@@ -166,14 +166,14 @@ resource "aws_lb_target_group" "centralized_ingress_lb_target_group" {
 resource "aws_lb_target_group_attachment" "centralized_ingress_lb_target_group_att" {
   target_group_arn  = aws_lb_target_group.centralized_ingress_lb_target_group.arn
   availability_zone = "all"
-  target_id         = var.proxy_lb-ip1
+  target_id         = var.proxy_lb_ip1
   port              = 80
 }
 
 resource "aws_lb_target_group_attachment" "centralized_ingress_lb_target_group_att2" {
   target_group_arn  = aws_lb_target_group.centralized_ingress_lb_target_group.arn
   availability_zone = "all"
-  target_id         = var.proxy_lb-ip2
+  target_id         = var.proxy_lb_ip2
   port              = 80
 }
 
