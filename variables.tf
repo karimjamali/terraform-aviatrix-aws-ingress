@@ -2,9 +2,8 @@ variable "aws_account_number" {
   default = null
 }
 
-variable "pan_fw_s3_bucket_bootstrap" {
+variable "unique_s3_bucket_name" {
   description = "This is the bucket that includes the bootsrap information for the PAN FW"
-  default     = ""
 }
 
 variable "aws_account_name" {}
@@ -14,12 +13,12 @@ variable "firenet" {
   default = true
 }
 
-variable "proxy-lb-ip1" {
-  default = "10.1.0.44"
+variable "proxy_lb-ip1" {
+  default = "10.1.0.66"
 }
 
-variable "proxy-lb-ip2" {
-  default = "10.1.0.53"
+variable "proxy_lb-ip2" {
+  default = "10.1.0.82"
 }
 
 variable "ubuntu_vms_password" {
@@ -32,7 +31,6 @@ variable "ha_setup" {
 
 variable "pan_fw_username" {
   default = "admin"
-
 }
 
 variable "pan_fw_password" {
