@@ -1,6 +1,6 @@
 #Adding aws-account to the controller
 resource "aviatrix_account" "aws-account" {
-  count              = var.aws_account_number ? 1 : 0
+  count              = var.aws_account_number == null ? 0 : 1
   account_name       = var.aws_account_name
   cloud_type         = 1
   aws_account_number = var.aws_account_number
