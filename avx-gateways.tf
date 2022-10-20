@@ -119,7 +119,7 @@ data "aws_route_table" "public_rt2" {
 resource "aviatrix_gateway" "centralized_ingress_psf_gateway" {
   cloud_type                                  = 1
   account_name                                = var.aws_account_name
-  gw_name                                     = "aws-us-east-1-central_ingress-psf-gw"
+  gw_name                                     = "aws-us-east-1-central-ingress-psf-gw"
   vpc_id                                      = module.spoke_aws_us_east_1_centralized_ingress.vpc.vpc_id
   vpc_reg                                     = "us-east-1"
   gw_size                                     = "t2.micro"

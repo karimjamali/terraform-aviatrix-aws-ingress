@@ -10,11 +10,11 @@ variable "firenet" {
 }
 
 variable "proxy_lb_ip1" {
-  default = "10.1.0.66"
+  default = "10.1.0.68"
 }
 
 variable "proxy_lb_ip2" {
-  default = "10.1.0.82"
+  default = "10.1.0.84"
 }
 
 variable "ubuntu_vms_password" {
