@@ -39,5 +39,10 @@ sudo sed -i 's/username_here/wordpress/g' /srv/www/wordpress/wp-config.php
 sed -i '11i update_option ( "siteurl", "'$central_lb_url'" );'  /srv/www/wordpress/wp-content/themes/twentytwentytwo/functions.php
 sed -i '11i update_option ( "home", "'$central_lb_url'" );'  /srv/www/wordpress/wp-content/themes/twentytwentytwo/functions.php
 
+curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+chmod +x wp-cli.phar
+sudo mv wp-cli.phar /usr/local/bin/wp
+cd /srv/www/wordpress
+wp core install --url=http://$central_lb_ip/ --title=CloudOps --admin_user=wordpress --admin_password=Aviatrix --admin_email=ace.lab@aviatrix.com --allow-root
 
 systemctl restart apache2
