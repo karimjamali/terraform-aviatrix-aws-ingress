@@ -44,5 +44,6 @@ chmod +x wp-cli.phar
 sudo mv wp-cli.phar /usr/local/bin/wp
 cd /srv/www/wordpress
 wp core install --url=http://$central_lb_ip/ --title=CloudOps --admin_user=wordpress --admin_password=Aviatrix --admin_email=ace.lab@aviatrix.com --allow-root
+wp theme activate twentytwentytwo --allow-root
 
 systemctl restart apache2
