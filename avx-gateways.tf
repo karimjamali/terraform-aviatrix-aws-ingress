@@ -91,7 +91,7 @@ module "spoke_aws-us-east-1-proxy" {
   account         = aviatrix_account.aws-account.account_name
   transit_gw      = module.mc_transit_aws-us-east-1-transit-1.transit_gateway.gw_name
   ha_gw = var.ha_setup
-  subnet_pairs = 2
+  subnet_pairs = 3
   
 }
 
