@@ -148,12 +148,12 @@ resource "aws_lb" "proxy_lb" {
   internal = true
   enable_cross_zone_load_balancing = true
   subnet_mapping {
-    subnet_id            = module.spoke_aws-us-east-1-proxy.vpc.public_subnets[0].subnet_id
+    subnet_id            = module.spoke_aws-us-east-1-proxy.vpc.public_subnets[1].subnet_id
     private_ipv4_address = var.proxy-lb-ip1
   }
 
   subnet_mapping {
-    subnet_id            = module.spoke_aws-us-east-1-proxy.vpc.public_subnets[1].subnet_id
+    subnet_id            = module.spoke_aws-us-east-1-proxy.vpc.public_subnets[2].subnet_id
     private_ipv4_address = var.proxy-lb-ip2
   }
 }
