@@ -72,7 +72,7 @@ data "aviatrix_firenet_vendor_integration" "fw2" {
 #Creating the Spoke that hosts the Proxy VM
 module "spoke_aws_us_east_1_proxy" {
   source       = "terraform-aviatrix-modules/mc-spoke/aviatrix"
-  version       = "1.5.3"
+  version      = "1.5.3"
   cloud        = "AWS"
   name         = "aws-us-east-1-proxy"
   cidr         = "10.1.0.0/16"
@@ -103,7 +103,7 @@ module "spoke_aws_us_east_1_centralized_ingress" {
   source     = "terraform-aviatrix-modules/mc-spoke/aviatrix"
   version    = "1.5.3"
   cloud      = "AWS"
-  name       = "aws-us-east-1-centralized-ingress"
+  name       = "aws-us-east-1-ingress"
   cidr       = "10.109.0.0/16"
   region     = "us-east-1"
   account    = var.aws_account_name
