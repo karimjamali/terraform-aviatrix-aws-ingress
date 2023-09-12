@@ -235,7 +235,8 @@ resource "aws_instance" "aws_us_east_1_web_vm" {
   }
   depends_on = [
     data.aviatrix_firenet_vendor_integration.fw1,
-    data.aviatrix_firenet_vendor_integration.fw2
+    data.aviatrix_firenet_vendor_integration.fw2,
+    aws_instance.aws_us_east_2_database_vm
   ]
 }
 
