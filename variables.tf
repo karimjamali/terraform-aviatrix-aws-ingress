@@ -25,10 +25,6 @@ variable "ha_setup" {
   default = false
 }
 
-variable "ha_transit" {
-  default = true
-}
-
 variable "pan_fw_username" {
   default = "admin"
 }

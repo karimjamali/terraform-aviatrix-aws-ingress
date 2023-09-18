@@ -10,7 +10,7 @@ module "mc_transit_aws_us_east_1_transit_1" {
   enable_transit_firenet = true
   insane_mode            = true
   enable_segmentation    = true
-  ha_gw                  = var.ha_transit
+  ha_gw                  = var.ha_setup
 }
 
 # Adding the Palo Alto Firewalls (FWs). 
@@ -147,7 +147,7 @@ module "mc_transit_aws_us_east_2_transit_1" {
   enable_transit_firenet = true
   insane_mode            = true
   enable_segmentation    = true
-  ha_gw                  = var.ha_transit
+  ha_gw                  = var.ha_setup
 }
 
 # Configuring transit peering between the two transits
