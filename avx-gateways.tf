@@ -1,7 +1,7 @@
 #creation of us-east-1-transit-1
 module "mc_transit_aws_us_east_1_transit_1" {
   source  = "terraform-aviatrix-modules/mc-transit/aviatrix"
-  version = "2.4.2"
+  version = "2.5.1"
 
   cloud                  = "AWS"
   cidr                   = "10.100.0.0/16"
@@ -18,7 +18,7 @@ module "mc_transit_aws_us_east_1_transit_1" {
 module "firenet_1" {
   count                                = var.firenet ? 1 : 0
   source                               = "terraform-aviatrix-modules/mc-firenet/aviatrix"
-  version                              = "1.4.3"
+  version                              = "1.5.2"
   keep_alive_via_lan_interface_enabled = true
   transit_module                       = module.mc_transit_aws_us_east_1_transit_1
   firewall_image                       = "Palo Alto Networks VM-Series Next-Generation Firewall Bundle 1"
@@ -72,7 +72,7 @@ data "aviatrix_firenet_vendor_integration" "fw2" {
 #Creating the Spoke that hosts the Proxy VM
 module "spoke_aws_us_east_1_proxy" {
   source       = "terraform-aviatrix-modules/mc-spoke/aviatrix"
-  version      = "1.5.3"
+  version      = "1.6.4"
   cloud        = "AWS"
   name         = "aws-us-east-1-proxy"
   cidr         = "10.1.0.0/16"
@@ -86,7 +86,7 @@ module "spoke_aws_us_east_1_proxy" {
 # Creating the Spoke that hosts the Web VM
 module "spoke_aws_us_east_1_web" {
   source  = "terraform-aviatrix-modules/mc-spoke/aviatrix"
-  version = "1.5.3"
+  version = "1.6.4"
 
 
   cloud      = "AWS"
@@ -101,7 +101,7 @@ module "spoke_aws_us_east_1_web" {
 #Vendor Integration: Creating the Spoke that hosts the DB VM
 module "spoke_aws_us_east_1_centralized_ingress" {
   source     = "terraform-aviatrix-modules/mc-spoke/aviatrix"
-  version    = "1.5.3"
+  version    = "1.6.4"
   cloud      = "AWS"
   name       = "aws-us-east-1-ingress"
   cidr       = "10.109.0.0/16"
@@ -139,7 +139,7 @@ resource "aviatrix_gateway" "centralized_ingress_psf_gateway" {
 # Creation of us-east-2-transit-1
 module "mc_transit_aws_us_east_2_transit_1" {
   source                 = "terraform-aviatrix-modules/mc-transit/aviatrix"
-  version                = "2.4.2"
+  version                = "2.5.1"
   cloud                  = "AWS"
   cidr                   = "10.120.0.0/16"
   region                 = "us-east-2"
@@ -163,7 +163,7 @@ module "transit_peering" {
 #Creating the Spoke that hosts the DB VM
 module "spoke_aws-us-east-2-database" {
   source     = "terraform-aviatrix-modules/mc-spoke/aviatrix"
-  version    = "1.5.3"
+  version    = "1.6.4"
   cloud      = "AWS"
   name       = "aws-us-east-2-database"
   cidr       = "10.3.0.0/16"
